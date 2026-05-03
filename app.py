@@ -4,7 +4,7 @@ import os
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
-DATABASE_URL = os.environ.get('DATABASE_URL', 'postgresql://postgres:1234@localhost:5432/barbershop_db')
+DATABASE_URL = "postgresql://barber_user:QbehjfHW0ePZgf8kuAczQsNI0sjed5RP@dpg-d7rr67n7fv73d78dgg-a/barbershop_db_0r9t?sslmode=require"
 conn = psycopg2.connect(DATABASE_URL)
  
 app = Flask(__name__) 
