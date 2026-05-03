@@ -10,7 +10,7 @@ conn = psycopg2.connect(DATABASE_URL)
 app = Flask(__name__) 
 
 
-gc = gspread.service_account(filename="barbershop-api-494914-1546df79a4ce.json")
+gc = gspread.service_account(filename="/etc/secrets/barbershop-api-494914-1546df79a4ce.json")
 sheet = gc.open("BarberShop записи").sheet1
 def add_to_sheets(phone, name, booking, time, barber, service):
     cur = conn.cursor()
